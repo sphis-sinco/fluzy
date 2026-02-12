@@ -10,7 +10,7 @@ class Floppy extends MSprite
 	{
 		super();
 
-		makeGraphic(320, 320, FlxColor.GRAY);
+		makeGraphic(80, 80, FlxColor.GRAY);
 
 		this.minigame = minigame;
 	}
