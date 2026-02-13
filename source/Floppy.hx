@@ -16,6 +16,24 @@ class Floppy extends InteractableMSprite
 
 		this.minigame = minigame;
 
+		onOverlap.add(function()
+		{
+			this.scale.set(1.1, 1.1);
+
+			this.colorTransform.redMultiplier = 1.25;
+			this.colorTransform.blueMultiplier = 1.25;
+			this.colorTransform.greenMultiplier = 1.25;
+		});
+
+		onUnOverlap.add(function()
+		{
+			this.scale.set(1.0, 1.0);
+			
+			this.colorTransform.redMultiplier = 1.0;
+			this.colorTransform.blueMultiplier = 1.0;
+			this.colorTransform.greenMultiplier = 1.0;
+		});
+
 		onLeftClick_justReleased.add(function()
 		{
 			if (minigame != null)
