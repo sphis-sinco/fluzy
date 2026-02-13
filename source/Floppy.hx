@@ -1,8 +1,8 @@
+import macohi.objects.interactable.InteractableMSprite;
 import flixel.util.typeLimit.NextState;
 import flixel.util.FlxColor;
-import macohi.overrides.MSprite;
 
-class Floppy extends MSprite
+class Floppy extends InteractableMSprite
 {
 	public var minigame:NextState = null;
 
