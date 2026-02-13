@@ -46,7 +46,5 @@ class PlayState extends MState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
-
-		camFollow.setX(-(FlxG.width / 2) + (FlxG.mouse.x / 10));
 	}
 }
