@@ -1,3 +1,4 @@
+import macohi.util.CamFollow;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.FlxG;
 import flixel.util.typeLimit.NextState;
@@ -10,6 +11,8 @@ class PlayState extends MState
 
 	public var floppies_minigames:Array<NextState> = [null, null, null];
 	public var floppies_base_positions:Array<Float> = [0, FlxG.width / 2, FlxG.width];
+
+	public var camFollow:CamFollow;
 
 	override public function create()
 	{
@@ -33,10 +36,17 @@ class PlayState extends MState
 
 			i++;
 		}
+
+		camFollow = new CamFollow();
+		add(camFollow);
+
+		FlxG.camera.zoom = 0.8;
 	}
 
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
+
+		camFollow.setX(FlxG.mouse.x);
 	}
 }
