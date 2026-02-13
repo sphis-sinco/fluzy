@@ -47,6 +47,6 @@ class PlayState extends MState
 	{
 		super.update(elapsed);
 
-		camFollow.setX(FlxG.mouse.x);
+		camFollow.setX(FlxG.mouse.x / 10);
 	}
 }
