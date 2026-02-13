@@ -1,3 +1,5 @@
+import macohi.funkin.vslice.util.AnsiUtil;
+import flixel.FlxG;
 import macohi.objects.interactable.InteractableMSprite;
 import flixel.util.typeLimit.NextState;
 import flixel.util.FlxColor;
@@ -13,5 +15,13 @@ class Floppy extends InteractableMSprite
 		makeGraphic(80, 80, FlxColor.GRAY);
 
 		this.minigame = minigame;
+
+		onLeftClick_justReleased.add(function()
+		{
+			if (minigame != null)
+				FlxG.switchState(minigame);
+			else
+				trace('<warning> : NULL MINIGAME');
+		});
 	}
 }
